@@ -1,0 +1,6 @@
+mysql
+- auto increment ID_pegawai
+- unique username
+
+Index that shows
+ ID_pegawai, Nama, and Username 

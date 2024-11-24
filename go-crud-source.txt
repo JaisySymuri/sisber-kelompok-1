@@ -1,0 +1,2 @@
+https://www.golangprograms.com/example-of-golang-crud-using-mysql-from-scratch.html
+D:\Exercise\go-crud2-date

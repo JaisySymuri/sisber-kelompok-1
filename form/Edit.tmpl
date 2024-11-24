@@ -1,0 +1,30 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Edit Profile</h2>  
+   <p>Tanggal Lahir harus diisi ulang!</p>  
+
+    <form method="POST" action="update">
+      <input type="hidden" name="uid" value="{{ .ID_Pegawai }}" />
+      <label> NIK </label><input type="text" name="NIK" value="{{ .NIK }}"  /><br />
+      <label> Nama </label><input type="text" name="Nama" value="{{ .Nama }}"  /><br />
+      <label> Username </label><input type="text" name="Username" value="{{ .Username }}"  /><br />
+      <label> Password </label><input type="text" name="Password" value="{{ .Password }}"  /><br />
+      <label> Alamat </label><input type="text" name="Alamat" value="{{ .Alamat }}"  /><br />
+      <label> Tempat_Lahir </label><input type="text" name="Tempat_Lahir" value="{{ .Tempat_Lahir }}"  /><br />
+      <label> Tanggal_Lahir </label><input type="date" name="Tanggal_Lahir" value="{{ .Tanggal_Lahir.Format "2006-01-02" }}" /><br />
+      <label> No_HP </label><input type="number" name="No_HP" value="{{ .No_HP }}"  /><br />
+      <label> Pekerjaan </label><input type="text" name="Pekerjaan" value="{{ .Pekerjaan }}"  /><br />
+      <label> Gender </label><input type="text" name="Gender" value="{{ .Gender }}"  /><br />
+   
+      <input type="submit" value="Save Profile" />
+    </form><br />   
+
+       <p>Tanggal Lahir harus diisi ulang!</p>  
+ 
+  {{ template "Footer" }}
+{{ end }}
+
+
+
+  

@@ -1,0 +1,16 @@
+root = "."
+tmp_dir = "tmp"
+build_args = ["-tags", "debug"]
+
+[exclude]
+  dirs = ["tmp", "vendor"]
+
+[build]
+  binary_name = "myapp"
+  output = "tmp/myapp"
+
+[[run]]
+  watch_dirs = ["."]
+  match = ["*.go"]
+  exclude = []
+  args = []

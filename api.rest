@@ -1,0 +1,55 @@
+@host = 192.168.1.156:9998
+
+// Create Employee
+POST http://{{host}}/create HTTP/1.1
+content-type: application/json
+    
+{
+"NIK": "123456",
+"Nama": "kenapa tidak tanggal",
+"Username": "sakuramiko",
+"Password": "password123",
+"Alamat": "789 Oak St",
+"Tempat_Lahir": "Tokyo",
+"Tanggal_Lahir": "1996-02-10",
+"No_HP": "0123456789",
+"Pekerjaan": "Virtual YouTuber",
+"Gender": "Female"
+}
+
+###
+
+// Get Employee By id
+GET http://{{host}}/employees/14 HTTP/1.1
+content-type: application/json
+
+###
+
+// Get All employee
+GET http://{{host}}/employees HTTP/1.1
+content-type: application/json
+
+###
+
+// Update Employee
+PUT http://{{host}}/updateemp/8 HTTP/1.1
+content-type: application/json
+
+{
+  "NIK": "876543",
+  "Nama": "Shirogane Noel",
+  "Username": "noelshiro",
+  "Password": "password",
+  "Alamat": "456 Pine St",
+  "Tempat_Lahir": "Osaka",
+  "Tanggal_Lahir": "1997-01-04",
+  "No_HP": "9876543210",
+  "Pekerjaan": "Idol",
+  "Gender": "Female" 
+}
+
+
+###
+
+// Delete Employee
+DELETE http://{{host}}/deleteemp/8 HTTP/1.1

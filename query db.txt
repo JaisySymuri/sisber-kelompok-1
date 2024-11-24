@@ -1,0 +1,7 @@
+create database Pegawai;
+
+use Pegawai;
+
+CREATE TABLE `Employee9998` (ID_Pegawai int auto_increment primary key, NIK varchar(16), Nama varchar(20), Username varchar(20) unique, Password varchar(120), Alamat varchar(100), Tempat_Lahir varchar(30), Tanggal_Lahir date, No_HP int, Pekerjaan varchar(20), Gender varchar(20),  updated_at datetime default CURRENT_TIMESTAMP, created_at datetime default CURRENT_TIMESTAMP) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+        
+select * from Employee9998;

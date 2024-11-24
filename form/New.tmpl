@@ -1,0 +1,22 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>New Profile</h2>  
+    <form method="POST" action="insert">
+      <label> NIK </label><input type="text" name="NIK"   /><br />
+      <label> Nama </label><input type="text" name="Nama"  /><br />
+      <label> Username </label><input type="text" name="Username"  /><br />
+      <label> Password </label><input type="Password" name="Password"   /><br />
+      <label> Alamat </label><input type="text" name="Alamat" /><br />
+      <label> Tempat_Lahir </label><input type="text" name="Tempat_Lahir"   /><br />
+      <label> Tanggal_Lahir </label><input type="date" name="Tanggal_Lahir"   /><br />
+      <label> No_HP </label><input type="number" name="No_HP" /><br />
+      <label> Pekerjaan </label><input type="text" name="Pekerjaan" /><br />
+      <label> Gender </label><input type="text" name="Gender"  /><br />
+         
+      <input type="submit" value="Save user" />
+    </form>
+  {{ template "Footer" }}
+{{ end }}
+
+

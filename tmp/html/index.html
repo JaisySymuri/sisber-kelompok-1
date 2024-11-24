@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golang Mysql Curd Sample</title>
+
+     <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+     <!-- Custom CSS to change the nav-wrapper background color -->
+    <style>
+        .nav-wrapper {
+            background-color: black;
+        }
+
+        /* Custom CSS for table appearance */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+
+
+    </head>
+    <body>
+        <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Golang Mysql CURD Sample</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/new">NEW</a></li>
+            </ul>
+        </div>
+    </nav>
+{{ end }}
+
+
+        <h1>Golang Mysql CURD Sample</h1>   
+
+
+        <title>Golang Mysql CURD Sample</title>
+        <meta charset="UTF-8" />
+    <!-- {{ template "Menu"  }} -->
+    <h2> Registered </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>ID_Pegawai</td>
+        <td>Nama</td>
+        <td>Username</td>
+       
+
+        <td>View</td>
+        <td>Edit</td>
+        <td>Delete</td>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .ID_Pegawai }}</td>
+        <td>{{ .Nama }}</td>
+        <td>{{ .Username }}</td>
+       
+        
+        <td><a href="/show?ID_Pegawai={{ .ID_Pegawai }}">View</a></td>
+        <td><a href="/edit?ID_Pegawai={{ .ID_Pegawai }}">Edit</a></td>
+        <td><a href="/delete?ID_Pegawai={{ .ID_Pegawai }}">Delete</a></td>
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+</body>
+</html>
+
+
+
+
+
+  

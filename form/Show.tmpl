@@ -1,0 +1,20 @@
+{{ define "Show" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> Register {{ .ID_Pegawai }} </h2>
+      <p>NIK: {{ .NIK }}</p>
+      <p>Nama: {{ .Nama }}</p>
+      <p>Username: {{ .Username }}</p>
+      <p>Password: {{ .Password }}</p>
+      <p>Alamat: {{ .Alamat }}</p>
+      <p>Tempat_Lahir: {{ .Tempat_Lahir }}</p>
+      <p>Tanggal_Lahir: {{ .Tanggal_Lahir }}</p>
+      <p>No_HP: {{ .No_HP }}</p>
+      <p>Pekerjaan: {{ .Pekerjaan }}</p>
+      <p>Gender: {{ .Gender }}</p>
+      
+      <br /> <a href="/edit?ID_Pegawai={{ .ID_Pegawai }}">Edit</a></p>
+  {{ template "Footer" }}
+{{ end }}
+
+
